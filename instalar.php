@@ -30,12 +30,11 @@
         $conexao->exec($sql);
 
 
-		// 3) CADASTRAR PRODUTO PARA TESTE
-        $sql = "INSERT INTO tb_produtos (nome_produto, preco, descricao, categoria) 
-                    VALUES ('Camiseta IFC Araquari', 300.00,'100% algodao', 'vestuário')";
+		// 3) CADASTRAR PRODUTO PARA TESTE. USE COMO EXEMPLO PARA O EXERCÍCIO
+        $sql = "INSERT INTO tb_produtos ( ) VALUES ()";
         $conexao->exec($sql);
 
-        echo "<h2>Banco de dados criado com sucesso!</h2> O registro de teste foi inserido com o id: ".$conexao->lastInsertId();
+        echo "<h2>Banco de dados criado com sucesso!</h2> O registro de teste foi inserido com o id: ".$conexao->;
 
 
 	} catch(PDOException $erro){
