@@ -1,21 +1,22 @@
 <?php
 
-	$usuario   = "root";
-	$senha     = "";
+    $bancoDeDados = 'bd_loja_ifc';
+    $usuario      = 'root';
+    $senha        = 'root';
 
 	try{
 
-		$conexao = new PDO("mysql:host=localhost;",'root', '');
+		$conexao = new PDO("mysql:host=localhost;", $usuario, $senha);
 		$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		// IMPORTANTE: use exec() quando não houverem resultados retornados
 
         // 1) CRIAR O BANCO DE DADOS
-        $sql = "CREATE DATABASE IF NOT EXISTS bd_loja_ifc;";
+        $sql = "CREATE DATABASE IF NOT EXISTS *********;";
         $conexao->exec($sql);
 
         // 1.1)  INDICAR QUAL BANCO IREMOS USAR
-        $sql = "USE bd_loja_ifc;";
+        $sql = "USE **************;";
         $conexao->exec($sql);
 
         // 2) CRIAR A TABELA PRODUTOS

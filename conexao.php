@@ -1,8 +1,12 @@
 <?php
 
+	$bancoDeDados = 'bd_loja_ifc';
+	$usuario      = 'root';
+	$senha        = 'root';
+
 	try {
-		
-		$conexao = new PDO("mysql:host=localhost;dbname=bd_loja_ifc",'root', '');
+
+		$conexao = new PDO("mysql:host=localhost;dbname=$bancoDeDados", $usuario, $senha);
 
 	} catch(PDOException $erro){
 
