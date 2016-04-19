@@ -1,0 +1,66 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size  : 14px;
+    line-height: 1.42857143;
+    color      : #555;
+}
+
+#loja {
+    margin    : 0 auto;
+    padding   : 25px;
+    background: #efefef;
+    overflow  : hidden;
+}
+
+.bloco {
+    width     :25%;
+    box-sizing: border-box;
+    padding   : 15px;
+    position  : relative;
+    float     : left;
+}
+
+.produto {
+    background        : #fff;
+    border-bottom     : dotted 1px #e6e6e6;
+    box-sizing        : border-box;
+    overflow          : hidden;
+    text-align        : center;
+}
+
+    .produto .image {
+        overflow: hidden;
+        position: relative;
+    }
+
+        .produto .image img {
+            -webkit-transition: all .2s ease-out;
+            -moz-transition   : all .2s ease-out;
+            transition        : all .2s ease-out;
+        }
+
+.produto .text {
+    padding: 10px;
+}
+
+    .produto .text h3 {
+        font-size: 20px;
+        height: 43.2px;
+        margin-bottom: 0;
+    }
+
+        .produto .text h3 a {
+            color:#555;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    
+        .produto .text p.price {
+            font-size:18px
+        }
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
