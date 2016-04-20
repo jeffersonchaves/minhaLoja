@@ -4,7 +4,7 @@
     $usuario      = 'root';
     $senha        = 'root';
 
-	try{
+	try {
 
 		$conexao = new PDO("mysql:host=localhost;", $usuario, $senha);
 		$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -12,11 +12,11 @@
 		// IMPORTANTE: use exec() quando não houverem resultados retornados
 
         // 1) CRIAR O BANCO DE DADOS
-        $sql = "CREATE DATABASE IF NOT EXISTS *********;";
+        $sql = "CREATE DATABASE IF NOT EXISTS $bancoDeDados;";
         $conexao->exec($sql);
 
         // 1.1)  INDICAR QUAL BANCO IREMOS USAR
-        $sql = "USE **************;";
+        $sql = "USE $bancoDeDados;";
         $conexao->exec($sql);
 
         // 2) CRIAR A TABELA PRODUTOS
@@ -31,10 +31,11 @@
 
 
 		// 3) CADASTRAR PRODUTO PARA TESTE. USE COMO EXEMPLO PARA O EXERCÍCIO
-        $sql = "INSERT INTO tb_produtos ( ) VALUES ()";
+        $sql = "INSERT INTO tb_produtos (nome_produto, preco, descricao, categoria ) 
+        VALUES ('Camiseta IFC', 35.00, 'Produto 100% poliester', 'vestuário')";
         $conexao->exec($sql);
 
-        echo "<h2>Banco de dados criado com sucesso!</h2> O registro de teste foi inserido com o id: ".$conexao->;
+        echo "<h2>Banco de dados criado com sucesso!</h2> O registro de teste foi inserido com o id: ".$conexao->lastInsertId();
 
 
 	} catch(PDOException $erro){
