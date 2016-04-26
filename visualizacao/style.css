@@ -28,38 +28,38 @@ body {
     text-align        : center;
 }
 
-    .produto .image {
+    .produto .imagem {
         overflow: hidden;
         position: relative;
     }
 
-        .produto .image img {
+        .produto .imagem img {
             -webkit-transition: all .2s ease-out;
             -moz-transition   : all .2s ease-out;
             transition        : all .2s ease-out;
         }
 
-.produto .text {
+.produto .texto {
     padding: 10px;
 }
 
-    .produto .text h3 {
+    .produto .texto h3 {
         font-size: 20px;
         height: 43.2px;
         margin-bottom: 0;
     }
 
-        .produto .text h3 a {
+        .produto .texto h3 a {
             color:#555;
             text-transform: uppercase;
             text-decoration: none;
         }
     
-        .produto .text p.price {
+        .produto .texto p.preco {
             font-size:18px
         }
 
-.img-responsive {
+.img-responsiva {
     max-width: 100%;
     height: auto;
     margin: 0 auto;
