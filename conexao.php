@@ -15,12 +15,14 @@
 		$produtos = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 		// Teste sua consulta com print_r
+		/*
 		foreach ($produtos as $produto_unico) {
 
 			echo "Compre ". $produto_unico['nome_produto']."<br />";
 			echo "Valor R$".$produto_unico['preco']."<br />";
 			echo "<br/>";
 		}
+		*/
 
 
 	} catch(PDOException $erro){
