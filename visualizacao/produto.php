@@ -25,9 +25,9 @@
 
   <div class="col-product">
 
-    <div class="product">
+    <div id="align-left" class="product">
 
-        //DADOS DO PRODUTO
+        <!--//DADOS DO PRODUTO-->
 
     </div>
   
