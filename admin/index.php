@@ -2,11 +2,9 @@
 
   require '../app/controlador_produto.php'; 
 
-  if(!isset($_GET['buscar'])){
-      $produtos = obterTodosProdutos();
-  }else {
-      $produtos = buscarProduto($_GET['buscar']);
-  }
+  /*IMPLEMENTAR ACAO DO BUSCAR*/
+  
+  $produtos = buscarProduto($_GET['buscar']);
 
 ?>
 
