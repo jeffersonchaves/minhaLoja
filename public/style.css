@@ -93,3 +93,83 @@ body {
     text-decoration: none;
     border-radius: 5px;
 }
+
+.gerenciarProdutos {
+    
+    max-width: 75%;
+    margin: 0 auto;
+
+}
+
+/*TABELA*/
+
+table {
+    
+    max-width: 75%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 3em;
+    width: 100%;
+    background: #fff;
+}
+td, th {
+    padding: 0.75em 1.5em;
+    text-align: left;
+}
+    td.err {
+        background-color: #e992b9;
+        color: #fff;
+        font-size: 0.75em;
+        text-align: center;
+        line-height: 1;
+    }
+th {
+    background-color: #31bc86;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+}
+tbody th {
+    background-color: #2ea879;
+}
+tbody tr:nth-child(2n-1) {
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+}
+tbody tr:hover {
+    background-color: rgba(129,208,177,.3);
+}
+
+
+/*Buscar form*/
+form.buscar {
+    width: 30%;
+    padding: 20px 0px;
+    float: right;
+}
+
+form.buscar input[type="text"] {
+    padding: 8px 10px;
+    width: 200px;
+}
+
+form.buscar input[type="submit"] {
+    padding: 5px 10px;
+    width: 62px;
+}
+
+
+/**FORM CADASTRO*/
+.cadastro-form input, .cadastro-form textarea {
+    
+    padding: 8px 15px;
+    width: 600px;
+    margin: 0 0 20px 0; 
+}
+
+.cadastro-form input[type="submit"] {
+    width: 180px;
+    border: none;
+    background: blue;
+    color: #fff;
+}
