@@ -4,7 +4,7 @@
 
   /*IMPLEMENTAR ACAO DO BUSCAR*/
   
-  $produtos = buscarProduto($_GET['buscar']);
+  $produtos = obterTodosProdutos();
 
 ?>
 
