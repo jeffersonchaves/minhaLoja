@@ -173,3 +173,15 @@ form.buscar input[type="submit"] {
     background: blue;
     color: #fff;
 }
+
+.botao {
+    border: none;
+    background: blue;
+    color: #fff;
+    padding: 8px 15px;
+    margin: 15px 0 0 0;
+    display: block;
+    position: relative;
+    float: left;
+    text-decoration: none;
+}

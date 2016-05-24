@@ -25,7 +25,8 @@
 
   <div class="gerenciarProdutos">
     
-    
+    <!-- ADICIONE O BOTAO CADASTRAR -->
+    <a href="" class="botao">CADASTRAR</a>
 
     <form class="buscar" method="get" action="">
       
