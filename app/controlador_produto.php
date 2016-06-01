@@ -1,6 +1,20 @@
 <?php
 
-require $_SERVER['DOCUMENT_ROOT']."/loja/app/conexao.php";
+function obterConexao()
+{
+    $usuario   = "root";
+    $senha     = "root";
+    $nome_banco= "bd_loja_ifc";
+
+    try 
+    {
+        $conexao = new PDO("mysql:host=localhost;dbname=$nome_banco", $usuario, $senha);
+        return $conexao;
+    
+    } catch(PDOException $erro){
+        echo "Conexao falhou: ". $erro->getMessage();
+    }
+}
 
 
 /** CREATE*/
@@ -26,7 +40,7 @@ function obterTodosProdutos()
     $conexao  = obterConexao();
 
     // Retorna uma declaracao: statement
-    $consulta = $conexao->query("SELECT * FROM tb_produtos");
+    $consulta = $conexao->query("SELECT * FROM tb_produtos ORDER BY id DESC");
     $produtos = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
     return $produtos;
@@ -61,7 +75,15 @@ function apagarProduto()
 
 
 /** Buscar produto que tenha a palavra procurada no nome*/
-function buscarProduto()
+function buscarProduto($nome)
 {
 
+    $conexao = obterConexao();
+
+    $consulta = "SELECT * FROM tb_produtos WHERE nome_produto LIKE '%{$nome}%' ";
+
+    $produtos = $conexao->query($consulta);
+    $produtos = $produtos->fetchAll(PDO::FETCH_ASSOC);
+
+    return $produtos;
 }

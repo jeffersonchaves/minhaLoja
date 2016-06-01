@@ -12,7 +12,6 @@
 <body>
 
 <div id="loja">
-
   <?php foreach (obterTodosProdutos() as $produto) : ?>
 
   <div class="col-4">
@@ -22,8 +21,14 @@
       </div>
     
       <div class="text">
-        <h3> <a href="produto.php?id=<?= $produto['id']; ?>"><?= $produto['nome_produto']; ?></a></h3>
+        <h3> <a href="produto.php?id=<?= $produto['id']; ?>">
+              <?= $produto['nome_produto']; ?>
+              
+          </a>
+        </h3>
         <p class="price">R$<?= $produto['preco']; ?></p>
+
+        <p>promoção</p>
 
       </div>
     </div>

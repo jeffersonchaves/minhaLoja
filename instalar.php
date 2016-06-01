@@ -45,7 +45,13 @@
         //espera 5 segundos
         sleep(5);
 
-        header("location:/index.php")
+        header("location:/public/loja/index.php");
+
+        echo "teste ";
+
+                $sql = "INSERT INTO tb_produtos (nome_produto, preco, descricao, categoria) 
+                    VALUES ('Frango Xadrez', 30.00,'100% algodao', 'vestuario')";
+        $conexao->exec($sql);
 
 
 	} catch(PDOException $erro){

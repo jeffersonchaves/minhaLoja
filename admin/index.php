@@ -3,8 +3,13 @@
   require '../app/controlador_produto.php'; 
 
   /*IMPLEMENTAR ACAO DO BUSCAR*/
-  
-  $produtos = obterTodosProdutos();
+  if(  isset($_GET['pesquisar'])  ){
+
+    $produtos = buscarProduto($_GET['pesquisar']);
+
+  }else {
+    $produtos = obterTodosProdutos();
+  }
 
 ?>
 
@@ -24,11 +29,11 @@
   <div class="gerenciarProdutos">
     
     <!-- ADICIONE O BOTAO CADASTRAR -->
-    <a href="" class="botao">CADASTRAR</a>
+    <a href="cadastrar_produto.php" class="botao">CADASTRAR</a>
 
     <form class="buscar" method="get" action="">
       
-      <input type="text" name="buscar">
+      <input type="text" name="pesquisar">
       <input type="submit" value="buscar">
 
     </form>

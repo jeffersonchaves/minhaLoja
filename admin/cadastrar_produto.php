@@ -1,9 +1,11 @@
 <?php 
 
-  require '../app/controle/produto.php'; 
+  require '../app/controlador_produto.php';
+
 
   if (isset($_POST['cadastrar'])) {
       cadastrarProduto($_POST);
+      //redirecionar para a pagina admin
   } 
 ?>
 
