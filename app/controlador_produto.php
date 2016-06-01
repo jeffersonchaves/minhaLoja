@@ -64,9 +64,20 @@ function obterProduto($id)
 function atualizarProduto($produto_atualizado)
 {
     
+    $conexao = obterConexao();
+    extract($produto_atualizado);
 
+    $sql = "UPDATE tb_produtos SET 
+                nome_produto = '$nome_produto',
+                preco        = $preco,
+                categoria    = '$categoria', 
+                descricao    = '$descricao'
+            WHERE id = $id";
 
-    
+    $conexao->exec($sql);
+
+    #redirecionar para a tela de admin
+    header('location: ../admin');
 
 }
 

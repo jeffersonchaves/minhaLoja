@@ -55,7 +55,9 @@
         <td><?= $produto['id']; ?></td>
         <td><?= $produto['nome_produto']; ?></td>
         <td><?= $produto['preco']; ?></td>
-        <td>editar | exluir</td>
+        
+        <td> <a href="atualizar_produto.php?id=<?php echo $produto['id']; ?>">editar</a> </td>
+      
       </tr>
 
     <?php endforeach; ?>

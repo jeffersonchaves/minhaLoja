@@ -2,14 +2,15 @@
 
   require '../app/controlador_produto.php';
 
-  $guarda_produto = obterProduto(34);
+  #exemplo id 48
 
-  echo "<pre>";
-  print_r($guarda_produto);
-  echo "</pre>";
+  $guarda_produto = obterProduto($_GET['id']);
 
-  if (isset($_POST['atualizar'])) {      
+  if (isset($_POST['atualizar'])) {
+      
       atualizarProduto($_POST);
+
+      //redirecionar para a pagina admin
   } 
 ?>
 
@@ -33,20 +34,25 @@
 
 
   <form class="cadastro-form" method="post"  action="">
+
+    <input type="hidden" name="id" value="<?php echo $guarda_produto['id']; ?>">
+
     <input type="text" name="nome_produto" value="<?php echo $guarda_produto['nome_produto']; ?>">
     <br>
+    
     <input type="text" name="preco" value="<?php echo $guarda_produto['preco']; ?>">
     <br>
+    
     <input type="text" name="categoria" value="<?php echo $guarda_produto['categoria']; ?>">
     <br>
+    
     <textarea name="descricao" id="" cols="30" rows="10">
       <?php echo $guarda_produto['descricao']; ?>
     </textarea>
     <br />
 
     <input type="submit" name="atualizar" value="atualizar produto">
-  
-  </form>
+
 
 </div>
 <!-- #loja -->
