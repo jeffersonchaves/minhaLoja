@@ -61,9 +61,13 @@ function obterProduto($id)
 
 /** UPDATE*/
 /** Atualizar registro no banco de dados */
-function atualalizarProduto()
+function atualizarProduto($produto_atualizado)
 {
- 
+    
+
+
+    
+
 }
 
 /** DELETE*/
